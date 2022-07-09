@@ -17,21 +17,21 @@ controller:
     method:
       register-deposit: /deposits
       register-withdrawal: /withdrawals
-      get-by-saving-account-id: /savings/{id}
-      get-by-fixed-term-account-id: /fixed-term/{id}
-      get-by-checking-account-id: /checking/{id}
+      get-by-saving-account-id: /savings/{${controller.path-variable.id}}
+      get-by-fixed-term-account-id: /fixed-term/{${controller.path-variable.id}}
+      get-by-checking-account-id: /checking/{${controller.path-variable.id}}
   credit-movement:
     base-path: /credits
     method:
       register-payment: /payments
       register-consumption: /consumption
-      get-by-credit-card-id: /credit-cards/{id}
+      get-by-credit-card-id: /credit-cards/{${controller.path-variable.id}}
   method:
     getAll:
-    getById: /{id}
+    getById: /{${controller.path-variable.id}}
     register:
-    updateById: /{id}
-    deleteById: /{id}
+    updateById: /{${controller.path-variable.id}}
+    deleteById: /{${controller.path-variable.id}}
   path-variable:
     id: id
 

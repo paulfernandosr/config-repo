@@ -23,10 +23,10 @@ controller:
     base-path: /savings
   method:
     getAll:
-    getById: /{id}
+    getById: /{${controller.path-variable.id}}
     register:
-    updateById: /{id}
-    deleteById: /{id}
+    updateById: /{${controller.path-variable.id}}
+    deleteById: /{${controller.path-variable.id}}
   path-variable:
     id: id
 
