@@ -18,9 +18,9 @@ controller:
     base-path: /business
   method:
     getAll:
-    getById: /{id}
+    getById: /{${controller.method.path-variable.id}}
     register:
-    updateById: /{id}
-    deleteById: /{id}
+    updateById: /{${controller.method.path-variable.id}}
+    deleteById: /{${controller.method.path-variable.id}}
   path-variable:
     id: id
