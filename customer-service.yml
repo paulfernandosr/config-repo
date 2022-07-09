@@ -16,11 +16,11 @@ controller:
     base-path: /personal
   business-customer:
     base-path: /business
-  path-variable:
-    id: id
   method:
     getAll:
-    getById: /{${controller.method.path-variable.id}}
+    getById: /{${controller.path-variable.id}}
     register:
-    updateById: /{${controller.method.path-variable.id}}
-    deleteById: /{${controller.method.path-variable.id}}
+    updateById: /{${controller.path-variable.id}}
+    deleteById: /{${controller.path-variable.id}}
+  path-variable:
+    id: id
