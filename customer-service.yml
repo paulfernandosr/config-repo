@@ -12,7 +12,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 controller:
-  base-path: /customers
+  customer:
+    base-path: /customers
   method:
     getAll:
     getById: /{id}
