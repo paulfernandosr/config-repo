@@ -12,6 +12,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 controller:
+  bank-account:
+    base-path: /bank-accounts
   checking-account:
     base-path: /checking
     method:
@@ -23,15 +25,14 @@ controller:
     base-path: /savings
   method:
     getAll:
-    getById: /{${controller.path-variable.id}}
+    getById: /{id}
     register:
-    updateById: /{${controller.path-variable.id}}
-    deleteById: /{${controller.path-variable.id}}
+    updateById: /{id}
+    deleteById: /{id}
   path-variable:
     id: id
 
 customer-service:
   base-url: http://localhost:8099/customers
   method:
-    get-personal-customer-by-id: /personal/{id}
-    get-business-customer-by-id: /business/{id}
+    get-customer-by-id: /customers/{id}
