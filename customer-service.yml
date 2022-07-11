@@ -12,15 +12,12 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 controller:
-  personal-customer:
-    base-path: /personal
-  business-customer:
-    base-path: /business
+  base-path: 
   method:
     getAll:
-    getById: /{${controller.path-variable.id}}
+    getById: /{id}
     register:
-    updateById: /{${controller.path-variable.id}}
-    deleteById: /{${controller.path-variable.id}}
+    updateById: /{id}
+    deleteById: /{id}
   path-variable:
     id: id
