@@ -13,18 +13,22 @@ eureka:
 
 controller:
   credit:
-    base-path: /credits
+    basePath: /credits
+    method:
+      getByCustomerId: /customers/{customerId}
+    pathVariable:
+      customerId: customerId
   method:
     getAll:
     getById: /{id}
     register:
     updateById: /{id}
     deleteById: /{id}
-  path-variable:
+  pathVariable:
     id: id
 
-customer-service:
-  base-url: http://localhost:8099/customers
+customerService:
+  baseUrl: http://localhost:8099/customers
   method:
-    get-customer-by-id: /customers/{id}
+    getCustomerById: /customers/{id}
   

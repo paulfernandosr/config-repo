@@ -36,3 +36,8 @@ customer-service:
   base-url: http://localhost:8099/customers
   method:
     get-customer-by-id: /customers/{id}
+
+credit-service:
+  base-url: http://localhost:8099/credits
+  method:
+    get-credits-by-customer-id: /credits/customers/{customerId}
