@@ -12,6 +12,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 controller:
+  credit:
+    base-path: /credits
   method:
     getAll:
     getById: /{id}
