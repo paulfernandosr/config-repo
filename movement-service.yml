@@ -38,6 +38,7 @@ controller:
 bank-account-service:
   base-url: http://localhost:8099/bank-accounts
   method:
+    getBankAccountById: /bank-accounts/{id}
     get-saving-account-by-id: /savings/{id}
     get-fixed-term-account-by-id: /fixed-term/{id}
     get-checking-account-by-id: /checking/{id}
