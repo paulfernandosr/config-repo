@@ -11,44 +11,15 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
-controller:
-  bank-account-movement:
-    base-path: /bank-accounts
-    method:
-      register-deposit: /deposits
-      register-withdrawal: /withdrawals
-      get-by-saving-account-id: /savings/{${controller.path-variable.id}}
-      get-by-fixed-term-account-id: /fixed-term/{${controller.path-variable.id}}
-      get-by-checking-account-id: /checking/{${controller.path-variable.id}}
-  credit-movement:
-    base-path: /credits
-    method:
-      register-payment: /payments
-      register-consumption: /consumption
-      get-by-credit-card-id: /credit-cards/{${controller.path-variable.id}}
+bankAccountService:
+  base-url: http://localhost:8099/bank-account-service
   method:
-    getAll:
-    getById: /{${controller.path-variable.id}}
-    register:
-    updateById: /{${controller.path-variable.id}}
-    deleteById: /{${controller.path-variable.id}}
-  path-variable:
-    id: id
-
-bank-account-service:
-  base-url: http://localhost:8099/bank-accounts
-  method:
-    getByCustomerId: /bank-accounts/customers/{customerId}
     getBankAccountById: /bank-accounts/{id}
-    get-saving-account-by-id: /savings/{id}
-    get-fixed-term-account-by-id: /fixed-term/{id}
-    get-checking-account-by-id: /checking/{id}
-    update-saving-account-by-id: /savings/{id}
-    update-fixed-term-account-by-id: /fixed-term/{id}
-    update-checking-account-by-id: /checking/{id}
+    getBankAccountsByCustomerId: /bank-accounts/customers/{customerId}
+    updateBankAccountById: /bank-accounts/{id}
 
-credit-service:
-  base-url: http://localhost:8099/credits
+creditService:
+  baseUrl: http://localhost:8099/credit-service
   method:
-    get-credit-card-by-id: /credit-cards/{id}
-    update-credit-card-by-id: /credit-cards/{id}
+    getCreditById: /credits/{id}
+    updateCreditById: /credits/{id}

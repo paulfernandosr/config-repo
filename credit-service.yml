@@ -11,24 +11,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
-controller:
-  credit:
-    basePath: /credits
-    method:
-      getByCustomerId: /customers/{customerId}
-    pathVariable:
-      customerId: customerId
-  method:
-    getAll:
-    getById: /{id}
-    register:
-    updateById: /{id}
-    deleteById: /{id}
-  pathVariable:
-    id: id
-
 customerService:
-  baseUrl: http://localhost:8099/customers
+  baseUrl: http://localhost:8099/customer-service
   method:
     getCustomerById: /customers/{id}
   

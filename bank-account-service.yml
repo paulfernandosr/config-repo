@@ -11,33 +11,12 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
-controller:
-  bank-account:
-    base-path: /bank-accounts
-  checking-account:
-    base-path: /checking
-    method:
-      register-personal: /personal
-      register-business: /business
-  fixed-term-account:
-    base-path: /fixed-term
-  savings-account:
-    base-path: /savings
+customerService:
+  baseUrl: http://localhost:8099/customer-service
   method:
-    getAll:
-    getById: /{id}
-    register:
-    updateById: /{id}
-    deleteById: /{id}
-  path-variable:
-    id: id
+    getCustomerById: /customers/{id}
 
-customer-service:
-  base-url: http://localhost:8099/customers
+creditService:
+  baseUrl: http://localhost:8099/credit-service
   method:
-    get-customer-by-id: /customers/{id}
-
-credit-service:
-  base-url: http://localhost:8099/credits
-  method:
-    get-credits-by-customer-id: /credits/customers/{customerId}
+    getCreditsByCustomerId: /credits/customers/{customerId}

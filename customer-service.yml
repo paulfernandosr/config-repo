@@ -10,15 +10,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-
-controller:
-  customer:
-    base-path: /customers
-  method:
-    getAll:
-    getById: /{id}
-    register:
-    updateById: /{id}
-    deleteById: /{id}
-  path-variable:
-    id: id
