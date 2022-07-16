@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://pfsr98:gmCHvU2F66iYwts@cluster0.no81esn.mongodb.net/meseroapp?retryWrites=true&w=majority
+      uri: mongodb+srv://pfsr98:gmCHvU2F66iYwts@cluster0.no81esn.mongodb.net/customer?retryWrites=true&w=majority
 
 eureka:
   client:
