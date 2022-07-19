@@ -16,6 +16,7 @@ bankAccountService:
   method:
     getBankAccountById: /bank-accounts/{id}
     getBankAccountsByCustomerId: /bank-accounts/customers/{customerId}
+    getDebitCardById: /debit-cards/{id}
     updateBankAccountById: /bank-accounts/{id}
 
 creditService:

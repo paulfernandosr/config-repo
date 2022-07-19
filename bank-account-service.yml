@@ -21,6 +21,11 @@ creditService:
   method:
     getCreditsByCustomerId: /credits/customers/{customerId}
 
+movementService:
+  baseUrl: http://localhost:8099/movement-service
+  method:
+    getMovementsByBankAccountId: /movements/bank-accounts/{bankAccountId}
+
 resilience4j.circuitbreaker:
   instances:
     creditService:
