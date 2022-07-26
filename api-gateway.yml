@@ -39,3 +39,15 @@ spring:
             - Path=/movement-service/**
           filters:
             - RewritePath=/movement-service/(?<x>.*), /$\{x}
+        - id: yanki-service
+          uri: lb://yanki-service
+          predicates:
+            - Path=/yanki-service/**
+          filters:
+            - RewritePath=/yanki-service/(?<x>.*), /$\{x}
+        - id: bootcoin-service
+          uri: lb://bootcoin-service
+          predicates:
+            - Path=/bootcoin-service/**
+          filters:
+            - RewritePath=/bootcoin-service/(?<x>.*), /$\{x}
